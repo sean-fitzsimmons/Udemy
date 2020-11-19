@@ -24,3 +24,25 @@
 ## Refercne Types & equality testing 
 - You can only compare memory not contents of array.
 ## Const and arrays 
+
+## Github
+  - Github is a version control system 
+  - Publishing too
+  - a collaboration platform 
+- Benefits 
+  - Great way to track code 
+  - collab
+  - save progress and then go back to point in our projects that work 
+  - makes it difficult to mess up projects 
+  
+## Commit and push your Git to Gitbash 
+ 
+  - Open up git bash inside the folder you want to push 
+  - git init
+  - git checkout -b branchname
+  - git add . 
+  - git commit -m 'init'
+  - git remote add subname email 
+  - git branch -M main 
+  - git push -u subname main
+  - And my phase is "sean" 
