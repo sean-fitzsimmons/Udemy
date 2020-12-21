@@ -24,7 +24,7 @@
 ## Refercne Types & equality testing 
 - You can only compare memory not contents of array.
 ## Const and arrays 
-
+- Upload this stuff. 
 ## Github
   - Github is a version control system 
   - Publishing too
@@ -43,6 +43,9 @@
   - git add . 
   - git commit -m 'init'
   - git remote add subname email 
-  - git branch -M main 
-  - git push -u subname main
+  - git branch -M branchname 
+  - git push -u subname branchname
   - And my phase is "sean" 
+  ## Arrays and const
+  - const arrays only cares the the variable is not reassigned 
+  - You can change the contents inside of the const just not the vessel itself
