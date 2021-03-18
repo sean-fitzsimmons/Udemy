@@ -39,14 +39,22 @@ const allLinks = document.querySelectorAll('a');
 
 // document.querySelector('#egg').alt = "chicken";
 // example on how to use the setAttribute to change the source of an image. 
-const h1 = document.querySelector('h1')
+// const h1 = document.querySelector('h1')
 
-for (let link of allLinks) {
-    link.style.color = 'rgb(0, 108, 134)'; 
-    link.style.textDecorationColor ='magenta'; 
-}
+// for (let link of allLinks) {
+//     link.style.color = 'rgb(0, 108, 134)'; 
+//     link.style.textDecorationColor ='magenta'; 
+// }
 // this changed the color off all the a tags on the webpage 
 // Everything needs to be inside a stirng, inside of quotes to be valid js
 // you have to use the for loop to be specific 
 // ALSO not a great idea, this tech. is inline. 
+// const container = document.getElementById("container");
+// for(let i = 0; i < 100; i++){
+//   /*First iliteration: button = a new DOM object, second iliteration:
+//     button = a new DOM object, etc.*/
+//    let button = document.createElement("button");
+//         container.appendChild(button);
+//         button.innerText = "Hey";
+// }
 
