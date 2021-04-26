@@ -39,4 +39,50 @@
                     - Only have to have one .catch() at the end of the promise 
                       - This is callled promise chaining 
 ## Creating our own promises 
--   
+-   const fakeRequest = (url) => {
+   return new Promise((resolve, reject) => {
+       const rand = Math.random(); 
+        setTimeout(() => {
+            if (rand < 0.7) {
+            resolve('Your fake data here!'); 
+            }
+            reject('Request Error!')
+        },1000)
+    })
+}
+
+fakeRequest('/dogs/1')
+    .then((data) => {
+        console.log("Done with request!")
+        console.log('data is:', data) 
+    })
+    .catch((err) => {
+        console.log("oh on!", err)
+    })
+    - Using a promise to basically do a setTimeout and lag a bit before preforming the action you want it to do. 
+    - First creat a function with two perameters, the first will resolve it and the next will reject it. 
+  const delayedColorChange = (color, delay) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            document.body.style.backgroundColor = color; 
+            resolve(); 
+        }, delay)
+    } )
+}
+
+delayedColorChange('red', 1000)
+    .then(() => delayedColorChange('organge', 1000))
+    .then(() => delayedColorChange('green', 1000))
+    .then(() => delayedColorChange('blue', 1000))
+    .then(() => delayedColorChange('purple', 1000))
+    .then(() => delayedColorChange('teal', 1000))
+    .then(() => delayedColorChange('white', 1000))
+
+  - rewrote the call back from hell nested nest to make the background color change using promises.
+  - Much better 
+  - if need to have a fail, just add on a single .catch and it will pick up all the necessary fails. '
+  ## The Async Keyword 
+  - syntax improvement for promises
+  - by placeing async infront of the word function, it automactically returns a function 
+  - If we throw and error or someting goes wrong along the way then the promise will not be resolved. 
+  - Nice to use, this would be a type of code to use when using a username and password against a server 
