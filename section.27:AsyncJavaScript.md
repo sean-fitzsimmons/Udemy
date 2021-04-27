@@ -86,3 +86,10 @@ delayedColorChange('red', 1000)
   - by placeing async infront of the word function, it automactically returns a function 
   - If we throw and error or someting goes wrong along the way then the promise will not be resolved. 
   - Nice to use, this would be a type of code to use when using a username and password against a server 
+## The await keyword 
+- we can only use the await keyword inside of functions declared with async. 
+- will pause the execution of the function, wating for a promise to be resolved 
+## Handling Errors in Async functions 
+- What happens when a promise is rejected that we are awaiting 
+- can use the try {
+} catch () { } method to check if code is working and where the error is being thrown 

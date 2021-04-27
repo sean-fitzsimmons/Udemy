@@ -78,17 +78,72 @@
 //     console.log(err)
 // })
 
-const login = async (username, password) => {
-    if(!username || !password) throw 'Missing Credentials'
-    if(password === 'corgif') return 'welcome!'
-    throw 'Invalid password '
+// const login = async (username, password) => {
+//     if(!username || !password) throw 'Missing Credentials'
+//     if(password === 'corgif') return 'welcome!'
+//     throw 'Invalid password '
+// }
+// login('assdfjl;', 'corgif')
+//     .then(msg => {
+//         console.log("logged in!")
+//         console.log(msg)
+//     })
+//     .catch(err => {
+//         console.log("ERR!")
+//         console.log(err)
+//     })
+
+
+// const delayedColorChange = (color, delay) => {
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 document.body.style.backgroundColor = color; 
+//                 resolve(); 
+//             }, delay)
+//         } )
+//     }
+    
+// //     delayedColorChange('red', 1000)
+// //         .then(() => delayedColorChange('organge', 1000))
+// //         .then(() => delayedColorChange('green', 1000))
+// //         .then(() => delayedColorChange('blue', 1000))
+// //         .then(() => delayedColorChange('purple', 1000))
+// //         .then(() => delayedColorChange('teal', 1000))
+// //         .then(() => delayedColorChange('white', 1000))
+    
+// async function rainbow() {
+//     await delayedColorChange('red', 1000)
+//     await delayedColorChange('orange', 1000)
+//     await delayedColorChange('yellow', 1000)
+//     await delayedColorChange('green', 1000)
+//     await delayedColorChange('blue', 1000)
+//     await delayedColorChange('teal', 1000)
+//     await delayedColorChange('black', 1000)
+//     return "All done"
+// }
+// rainbow().then(()=> console.log("end of rainbow"))
+
+const fakeRequest = (url) => {
+       return new Promise((resolve, reject) => {
+           const rand = Math.random(); 
+            setTimeout(() => {
+                if (rand < 0.7) {
+                resolve('Your fake data here!'); 
+                }
+                reject('Request Error!')
+            },1000)
+        })
+    }
+    
+async function makeTwoRequest() {
+    try {
+    let data1 = await fakeRequest('/page1'); 
+    console.log(data1);
+    let data2 = await fakeRequest('/page2');
+    console.log(data2);  
+    console.log(data1)
+    } catch (e) {
+console.log("caught an error")
+console.log("error is:", e)
+    }
 }
-login('assdfjl;', 'corgif')
-    .then(msg => {
-        console.log("logged in!")
-        console.log(msg)
-    })
-    .catch(err => {
-        console.log("ERR!")
-        console.log(err)
-    })
