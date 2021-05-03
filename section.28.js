@@ -86,15 +86,15 @@
 // }
 // button.addEventListener('click', addNewJoke)
 
-const form = document.querySelector('#searchForm'); 
+const form = document.querySelector('#searchForm');
 form.addEventListener('submit', async function (e) {
     e.preventDefault(); 
     const searchTerm = form.elements.query.value; 
-    const config = { params: { q: searchTerm} }
+    const config = { params: { q: searchTerm}, headers: {} }
     const res = await axios.get(`http://api.tvmaze.com/search/shows`, config);
+    document.getElementById("newSearch").innerHTML = ""; 
     makeImages(res.data)
     form.elements.query.value = ''; 
-
 })
 
 const makeImages = (shows) => {
@@ -102,7 +102,9 @@ const makeImages = (shows) => {
         if(result.show.image) {
         const img = document.createElement('IMG'); 
     img.src = result.show.image.medium;  
-    document.body.append(img)
+    document.getElementById("newSearch").append(img); 
+    // document.body.append(img)
     }
 }
 }
+// This allowed us to search the tvmaze site and pull pitures up using the api 

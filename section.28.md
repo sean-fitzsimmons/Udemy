@@ -71,4 +71,4 @@
 - do not do an infitinte loop because api's can ban you 
   
 ## Tv show search app 
-- 
+- This allowed us to search the tvmaze site and pull pitures up using the api
