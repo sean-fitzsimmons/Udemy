@@ -31,3 +31,6 @@
 ## File system module crash course 
 - tons of methods to create, add files, open or close files, make directories. a whole bunch of stuff 
 - rmdir directoryname 
+- need to have the cosnt fs model for the whole thing to work 
+- The boiler plate made a loop that makes a dir with files in it 
+  - Just a taste of node 
